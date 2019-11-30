@@ -53,6 +53,8 @@
 
 // OBJECTS
 
+/*
+
 const person = {
   first: 'brandon',
   last: 'perfetti',
@@ -79,3 +81,17 @@ const teller = {
 
 teller.first = 'Teller';
 teller.last = null;
+
+*/
+
+const isDrawing = false;
+const age = 18;
+const ofAge = age > 19;
+console.log(ofAge);
+
+// = sets a value
+
+// double equals is bad practice
+// ==  only checks for matching values and ignores types
+
+// === checks for both value and type
