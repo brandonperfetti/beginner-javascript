@@ -54,7 +54,28 @@
 // OBJECTS
 
 const person = {
-    first: 'brandon',
-    last: 'perfetti',
-    age: 100,
+  first: 'brandon',
+  last: 'perfetti',
+  age: 100,
 };
+
+// NULL and UNDEFINED
+
+let dog;
+console.log(dog);
+dog = 'snickers';
+
+let somethingUndefined;
+const somethingNull = null;
+
+const cher = {
+  first: 'cher',
+};
+
+const teller = {
+  first: 'Raymond',
+  last: 'Teller',
+};
+
+teller.first = 'Teller';
+teller.last = null;
