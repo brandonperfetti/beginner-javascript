@@ -22,7 +22,7 @@ pizza`
 // interpolation: when you put a variable inside of a string
 const hello = `hello my name is ${name}. Nice to meet you. I am ${1+100} years old.`;
 
-// backtics can
+// Using backtics allows you to pass through html as a string.
 const html = `
 <div>
   <h2>${name}</h2>
