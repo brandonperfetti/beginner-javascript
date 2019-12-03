@@ -1,33 +1,35 @@
 const people = [
-  { name: 'Brandon', cool: true, country: 'Canada' },
-  { name: 'Steve', cool: true, country: 'Merica' },
-  { name: 'Pearl', cool: false, country: 'Fish Country' },
+  { name: 'Wes', cool: true, country: 'Canada' },
+  { name: 'Scott', cool: true, country: 'Merica' },
+  { name: 'Snickers', cool: false, country: 'Dog Country' },
 ];
+
+people.forEach((person, index) => {
+  console.error(person.name);
+});
 
 // Console Methods
 
-people.forEach((person, index) => {
-  // debugger;
-  console.log(`${person.name}`);
-});
+// Callstack
 
-// console.table(people);
+// Grabbing Elements
 
-function doALotOfStuff() {
-  console.group('Doing some stuff');
-  console.log('Oh, Hey man!');
-  console.log('Take it easy');
-  console.error('whoops!');
-  console.groupEnd('Doing some stuff');
-}
+// Breakpoints
+
+// Scope
+
+// Network Requests
+
+// Break On Attribute
+
+// Some Setup Code
 
 function doctorize(name) {
-  // console.count(`Running Doctorize for ${name}`);
   return `Dr. ${name}`;
 }
 
 function greet(name) {
-  doesntExist(); // will cause an errror
+  doesntExist();
   return `Hello ${name}`;
 }
 
@@ -35,13 +37,6 @@ function go() {
   const name = doctorize(greet('Wes'));
   console.log(name);
 }
-
-function bootstrap() {
-  console.log('Starting the app!');
-  go();
-}
-
-// bootstrap();
 
 const button = document.querySelector('.bigger');
 button.addEventListener('click', function(e) {
