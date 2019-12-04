@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../base.css" />
+  </head>
+  <body>
+    <script>
+    //   function outer() {
+    //     const outerVar = "Hey I am the outer var!";
+    //     function inner() {
+    //       const innerVar = "Hey I am an inner var!";
+    //       console.log(innerVar);
+    //       console.log(outerVar);
+    //     }
+    //     return inner;
+    //   }
+    //   const innerFn = outer();
+
+
+    function createGreeting(greeting = '') {
+        const myGreet = greeting.toUpperCase();
+        return function(name) {
+            return `${myGreet} ${name}`;
+        }
+    }
+
+    const sayHello = createGreeting('hello');
+    const sayHey = createGreeting('hey');
+    console.log(sayHello('brandon'));
+    console.log(sayHello('steve'));
+    console.log(sayHey('steve'));
+
+    // the function we create is called win
+    function createGame(gameName) {
+        // whenever we create the game we create an empty score variable
+        let score = 0;
+        // whenever we run, the inner function , it will increment the score variable that is of the scope of the outer scope
+        return function win() {
+            score++;
+            return `Your Game ${gameName} score is ${score}`;
+        }
+    }
+
+    const hockeyGame = createGame('Hockey');
+    const soccerGame = createGame('Soccer');
+
+    // closures are the ability for the child/inner function to access variables from a higher level scope. Even after the functions have been called/closed/closed over
+    </script>
+  </body>
+</html>
