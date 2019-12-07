@@ -46,3 +46,22 @@ function toggleRound() {
 }
 
 pic.addEventListener('click', toggleRound);
+
+pic.alt = 'Love'; // setter
+console.log(pic.alt); // getter
+console.log(pic.naturalWidth); // getter
+pic.width = 200;
+// load event waits for all data to be loaded on the page before calling a function
+pic.addEventListener('load', function() {
+  console.log(pic.naturalWidth); // getter
+});
+
+// pic.setAttribute('alt', 'Wheel');
+// console.log(pic.getAttribute('alt'));
+
+const custom = document.querySelector('.custom');
+console.log(custom.dataset);
+
+custom.addEventListener('click', function() {
+  alert(`Welcome ${custom.dataset.name} ${custom.dataset.last}`);
+});
