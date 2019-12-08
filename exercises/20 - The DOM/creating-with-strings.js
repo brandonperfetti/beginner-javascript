@@ -4,10 +4,14 @@ const item = document.querySelector('.item');
 
 const width = 500;
 const src = `https://picsum.photos/${width}`;
-const desc = `Cute Pup`;
+// const desc = `Cute Pup`;
+
+// XSS - cross site scripting example
+const desc = `Cute Pup <img onload="alert('HACKED!')"
+src="https://picsum.photos/50"/>`;
 const myHTML = `
   <div class="wrapper">
-    <h2>Cute Pup</h2>
+    <h2>${desc}</h2>
     <img src="${src}" alt="${desc}" />
   </div>
 `;
