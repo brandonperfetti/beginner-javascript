@@ -1,4 +1,4 @@
-console.log('It Works!');
+// console.log('It Works!');
 
 const item = document.querySelector('.item');
 
@@ -18,13 +18,23 @@ const myHTML = `
 //   </div>
 // `;
 
-console.log(myHTML.classList);
-console.log(typeof myHTML);
+// Interpolate values using back tics
 
-item.innerHTML = myHTML;
+// console.log(myHTML.classList);
+// console.log(typeof myHTML);
 
-console.log(item.innerHTML);
+// item.innerHTML = myHTML;
 
-const itemImage = document.querySelector('.wrapper img');
-itemImage.classList.add('round');
-console.log(itemImage);
+// console.log(item.innerHTML);
+
+// const itemImage = document.querySelector('.wrapper img');
+// itemImage.classList.add('round');
+// console.log(itemImage);
+
+// Turn a string into a DOM element
+const myFragment = document.createRange().createContextualFragment(myHTML);
+
+console.log(myFragment.querySelector('img'));
+console.log(myFragment);
+
+document.body.appendChild(myFragment);
